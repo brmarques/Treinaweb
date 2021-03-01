@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1613677809 source:/home/braulio/Scratch/Treinaweb/CursoLogica/DesafioParcelasV2/main.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1614176540 source:/home/braulio/Scratch/Treinaweb/CursoLogica/BubbleSort/main.c
+	<stdio.h>
+	<stdlib.h>
+

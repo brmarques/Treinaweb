@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1613606111 source:/home/braulio/Scratch/Treinaweb/CursoLogica/Media/main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
