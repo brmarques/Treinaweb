@@ -4,19 +4,19 @@
 int main()
 {
     float parcelaInicial;
-    float porcentagemDecrecimo;
+    float porcentagemDecrescimo;
     float qtdParcelas;
     float parcela, porcentagem;
 
     printf("Digite o valor da parcela inicial: ");
     scanf("%f", &parcelaInicial);
     printf("Digite o valor da porcentagem a ser subtraida a cada parcela: ");
-    scanf("%f", &porcentagemDecrecimo);
+    scanf("%f", &porcentagemDecrescimo);
     printf("Digite o valor da quantidade de parcelas: ");
     scanf("%f", &qtdParcelas);
 
     parcela = parcelaInicial;
-    porcentagem = (100 - porcentagemDecrecimo) / 100;
+    porcentagem = (100 - porcentagemDecrescimo) / 100;
 
 
     for(int contador=1; contador <= qtdParcelas; contador++) {
