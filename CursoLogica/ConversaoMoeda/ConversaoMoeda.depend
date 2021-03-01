@@ -1,6 +1,5 @@
 # depslib dependency file v1.0
-1614637271 source:/home/braulio/Scratch/Treinaweb/CursoLogica/ConversaoMoeda/main.c
+1614637530 source:/home/braulio/Scratch/Treinaweb/CursoLogica/ConversaoMoeda/main.c
 	<stdio.h>
 	<stdlib.h>
-	<math.h>
 
