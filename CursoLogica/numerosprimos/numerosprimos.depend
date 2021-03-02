@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1614724203 source:/home/braulio/Scratch/Treinaweb/CursoLogica/numerosprimos/main.c
+	<stdio.h>
+	<stdlib.h>
+
