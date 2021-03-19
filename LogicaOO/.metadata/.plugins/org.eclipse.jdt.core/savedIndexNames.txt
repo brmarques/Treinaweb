@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+/home/braulio/eclipse-workspace/LogicaOO/.metadata/.plugins/org.eclipse.jdt.core
-543786356.index
-3639288285.index
