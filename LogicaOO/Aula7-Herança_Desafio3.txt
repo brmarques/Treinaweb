@@ -1,0 +1,39 @@
+Aula 7 Herança - Desafio 3
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+abstract class Livro
+{
+    protected String titulo;
+    
+    public abstract void setTitulo(String s);
+    
+    public String getTitulo(){
+        return titulo;
+    }
+}
+
+class MeuLivro extends Livro
+{
+    @Override
+    public void setTitulo(String s)
+    {
+        this.titulo = s;
+    }
+}
+
+public class Programa
+{
+    public static void main(String []args){
+        Scanner scann = new Scanner(System.in);
+    
+        Livro a = new MeuLivro();
+        a.setTitulo(scann.nextLine());
+                
+        System.out.println(a.getTitulo());
+     }
+}

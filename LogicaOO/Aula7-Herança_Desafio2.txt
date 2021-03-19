@@ -1,0 +1,54 @@
+Aula 7 Herança - Desafio 2
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+class Pessoa
+{
+    private String nome;
+    private int idade;
+    
+    public Pessoa(String nome, int idade)
+    {
+        this.nome = nome;
+        this.idade = idade;
+    }
+    
+    public void showInfo()
+    {
+        System.out.println(nome);
+        System.out.println(idade);
+    }
+}
+
+class Programador extends Pessoa {
+
+    private String linguagem;
+    
+    public Programador(String nome, int idade, String linguagem)
+    {
+       super(nome, idade);
+       this.linguagem = linguagem;
+    }
+
+    @Override
+    public void showInfo()
+    {
+        super.showInfo();
+        System.out.println(linguagem);
+    }
+}
+
+public class Programa
+{
+    public static void main(String []args){
+        Scanner scann = new Scanner(System.in);
+    
+        Pessoa a = new Programador(scann.nextLine(), Integer.valueOf(scann.nextLine()), scann.nextLine());
+                
+        a.showInfo();
+     }
+}

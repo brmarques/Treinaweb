@@ -1,0 +1,55 @@
+Aula 7 Herança - Desafio 1: 
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+class Animal
+{
+    private String nome;
+    private String especie;
+    
+    public void setNome(String nome)
+    {
+        this.nome = nome;
+    }
+    
+    public String getNome()
+    {
+        return nome;
+    }
+    
+    public void setEspecie(String especie)
+    {
+        this.especie = especie;
+    }
+    
+    public String getEspecie()
+    {
+        return especie;
+    }
+}
+
+class Gato extends Animal{
+
+    @Override
+    public String getEspecie()
+    {
+        return getNome() + " é um Gato";
+    }
+}
+
+public class Programa
+{
+    public static void main(String []args)
+    {
+        Animal a = new Gato();
+        
+        Scanner scann = new Scanner(System.in);
+        a.setNome(scann.nextLine());
+
+        System.out.println(a.getEspecie());
+     }
+}

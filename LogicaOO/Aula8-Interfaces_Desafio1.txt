@@ -1,0 +1,46 @@
+import java.util.*;
+import java.math.*;
+
+interface Forma{
+  double area();
+}
+
+//Código aqui
+
+class Circulo implements Forma {
+    private double raio;
+    
+    public void setRaio(double raio){
+        this.raio = raio;
+    }
+    
+    public double getRaio(){
+        return this.raio;
+    }
+    
+    public double area(){
+        return Math.PI * Math.pow(raio, 2);
+    }
+}
+public class Programa{
+    public static void main(String []args){
+    
+        Circulo c = new Circulo();
+        System.out.print("Implementei: ");
+        
+        Class[] theInterfaces = c.getClass().getInterfaces();
+        for (int i = 0; i < theInterfaces.length; i++){
+            String interfaceName = theInterfaces[i].getName();
+            System.out.println(interfaceName);
+        }
+        
+        Scanner sc = new Scanner(System.in);
+        double n = sc.nextDouble();
+        c.setRaio(n);
+        System.out.printf("%6.2f\n", c.area());
+      	sc.close();
+    }
+}
+
+
+

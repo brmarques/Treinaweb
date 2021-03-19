@@ -1,0 +1,75 @@
+Desafio de Código
+Como funciona?
+Declare uma interface chamada Aritmetica que define o método int fatorial(int). Em seguinda, defina uma classe Calculadora que implementa a interface Aritmetica e calcula o valor fatoral de um número inteiro.
+Obs: Devido a limitações do Java, a classe definida não pode ser pública.
+Entrada de dados: 5
+Saída esperada: 120
+Obs: Devido a limitações do Java, a classe definida não pode ser pública.
+==========================================================================================
+Dados de entrada: 5
+Resultado esperado: 120
+Resultado da execução: 120
+==========================================================================================
+import java.util.*;
+import java.math.*;
+//Defina seu código aqui
+interface Aritmetica {
+    int fatorial(int n);
+}
+class Calculadora implements Aritmetica {
+    @Override
+    public int fatorial(int n){
+        for (int i = n; i > 1; i--){
+            n = n * (i -1);
+        }
+    return n;
+    }
+}
+public class Programa{
+    public static void main(String []args){
+    
+        Aritmetica c = new Calculadora();
+        
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.printf("%d\n", c.fatorial(n));
+      	sc.close();
+    }
+}
+
+==========================================================================================
+
+Resposta do Professor
+
+import java.util.*;
+import java.math.*;
+
+interface Aritmetica
+{
+    int fatorial(int n);
+}
+
+class Calculadora implements Aritmetica
+{
+    @Override
+    public int fatorial(int n)
+    {
+        if(n > 0)
+            return n * fatorial(n - 1);
+        else
+            return 1;
+    }
+}
+
+public class Programa{
+
+    public static void main(String []args){
+    
+        Aritmetica c = new Calculadora();
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.printf("%d\n", c.fatorial(n));
+      	sc.close();
+    }
+}

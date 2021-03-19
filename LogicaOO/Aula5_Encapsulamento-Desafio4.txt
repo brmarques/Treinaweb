@@ -1,0 +1,55 @@
+//Aula 5 - Encapsulamento - Desafio 4
+//Método personalizado para atributo nome
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.lang.reflect.*;
+
+class Pessoa
+{
+    private String nome;
+    private int idade;
+    
+    public Pessoa(String nome) //Método personalizado para atributo nome
+    {
+        this.nome = nome;
+    }
+    
+    public void setIdade(int idade)
+    {
+        this.idade = idade;
+    }
+    
+    public String getNome()
+    {
+        return nome;
+    }
+    
+    public int getIdade()
+    {
+        return idade;
+    }
+}
+
+public class Programa
+{
+    public static void main(String []args){
+        Field[] allFields = Pessoa.class.getDeclaredFields();
+        
+        for (Field field : allFields) {
+            if (Modifier.isPrivate(field.getModifiers())) {
+                System.out.println(field.getName());
+            }
+        }
+        
+        Scanner scann = new Scanner(System.in);
+        Pessoa a = new Pessoa(scann.nextLine());
+            
+        a.setIdade(scann.nextInt());
+            
+        System.out.println(a.getNome());
+        System.out.println(a.getIdade());
+    }
+}

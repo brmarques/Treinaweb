@@ -1,0 +1,46 @@
+Exercício - Capítulo 6 - Hora de Praticar!
+
+Exercícios
+
+É muito importante que você faça os exercícios propostos para desenvolvimento e fixação do conteúdo, no entanto é opcional e, ao final dos enunciados, você pode baixar as respostas. 😊
+
+1 – Você deverá desenvolver uma aplicação para um consultório dentário, mas como é inexperiente, foi contratado para desenvolver apenas um trecho de uma aplicação.
+
+O seu trabalho consiste em documentar em UML um modelo que represente um dentista.
+
+Os dentistas possuem as seguintes características:
+
+    Nome e sobrenome;
+    Especialidade;
+    Registro no conselho regional de odontologia;
+    Se está ativo ou não;
+
+Eles ainda poderão atender pacientes, marcar, remarcar e cancelar consultas e indicar que não estão disponíveis porque irão para um congresso.
+
+2 – Devido ao bom resultado do seu diagrama UML, o seu trabalho na aplicação foi ampliado.
+
+Agora é necessário que o diagrama UML criado no exercício 1 seja codificado em Java.
+
+É importante que os atributos sejam encapsulados.
+
+3 – Continuando com o seu ótimo trabalho, a sua atuação no projeto foi ampliada.
+
+Agora o seu trabalho consiste em documentar em UML e codificar os pacientes do consultório.
+
+Os pacientes possuem as seguintes características:
+
+    Código;
+    Nome e sobrenome;
+    Idade;
+    Sexo;
+    Telefone;
+    Endereço;
+
+Os pacientes poderão marcar, remarcar, consultar e cancelar consultas.
+
+4 – Devido o sempre ótimo trabalho, foi requerida uma última tarefa.
+
+É necessário que as classes Java criadas nos exercícios 2 e 3 sejam testadas.
+
+É importante que todos as ações possam ser executadas.
+
