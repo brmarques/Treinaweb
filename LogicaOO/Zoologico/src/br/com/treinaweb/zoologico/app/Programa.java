@@ -1,28 +1,42 @@
 package br.com.treinaweb.zoologico.app;
-import br.com.treinaweb.zoologico.classes.*; //referencia todas as classes contidas no pacote classe
+
+import br.com.treinaweb.zoologico.classes.Animal;
+import br.com.treinaweb.zoologico.classes.Animavel;
+import br.com.treinaweb.zoologico.classes.Cachorro;
+import br.com.treinaweb.zoologico.classes.Gato;
+import br.com.treinaweb.zoologico.classes.Veterinario;
+import br.com.treinaweb.zoologico.classes.Zoologico;
 
 public class Programa {
 
 	public static void main(String[] args) {
-		//após a criação do construtor personalizado, o método deve receber os parâmetros diretamente, elimina a necessidade dos métodos set nesse cenário
-		//sobrecarga = mais de um método com o mesmo nome, com assinaturas diferentes, não podem ter a mesma assinatura, pois dá erro
-											//assinatura = nome do método e tipos de parâmetros==>>independe do conteúdo do parâmetro, ex em Animal.java 
-		 Animal animal = new Cachorro ("Bethoven", 3); //LSP (Liskov substitution principle) - Polimorfismo
-		 //Gato gato = new Gato ("Félix", 0, "Gato");
-		
-		//cachorro.setNome("Totó");		//cachorro.setIdade(2);		//cachorro.setEspecie("Cachorro");
-		
-		System.out.println("Olá, seu animal é " + animal.getEspecie() + ", o nome do animal é " + animal.getNome() + " e ele tem " + animal.getIdade() + " anos.");
+		Animal animal = new Cachorro("Tot�", 2);
+		System.out.println("Ol�, seu animal � " + animal.getEspecie() + ", o nome do " + "animal � " + animal.getNome()
+				+ " e ele tem " + animal.getIdade() + " anos.");
 		if (animal.ehAdulto()) {
-			System.out.println(animal.getEspecie() + " " + animal.getNome() + " é adulto.");
+			System.out.println("Cachorro adulto");
 		} else {
-			System.out.println(animal.getEspecie() + " " + animal.getNome() + " não é adulto.");
+			System.out.println("Cachorro n�o � adulto");
 		}
-		
-		System.out.println("Barulho do animal: ");
+		System.out.println("==========");
+		System.out.println("Barulho do cachorro: ");
 		animal.emitirBarulho();
-		System.out.println("=====================================");	
-		animal.morrer();
-		animal.emitirBarulho();
+		System.out.println("***************************");
+		Zoologico zoo = new Zoologico();
+		zoo.setNome("Zoo TreinaWeb");
+		zoo.adicionarAnimal(animal);
+		Animal animal2 = new Gato("Z�", 3);
+		zoo.adicionarAnimal(animal2);
+		System.out.println("Animais do zool�gico " + zoo.getNome());
+		zoo.listarAnimais();
+		zoo.removerAnimal(0);
+		System.out.println("Depois da remo��o: ");
+		zoo.listarAnimais();
+
+		Veterinario vet = new Veterinario();
+		vet.setNome("TreinaWeb");
+		vet.atenderAnimal(animal);
+		vet.listarAnimaisAtendidos();
 	}
+
 }
