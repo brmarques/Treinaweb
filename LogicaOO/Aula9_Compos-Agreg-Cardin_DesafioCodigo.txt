@@ -1,0 +1,149 @@
+Dado a classe Funcionario abaixo:
+
+class Funcionario
+{
+    private String nome;
+    
+    public Funcionario(String nome)
+    {
+        this.nome = nome;
+    }
+    
+    public String getNome()
+    {
+        return this.nome;
+    }
+}
+
+Declare uma classe chamada Departamento, que contenhas as características abaixo:
+Um método adicionarFuncionario, que permite a adição de um funcionário;
+Um método listarFuncionarios, que lista o nome dos funcionários do departamento.
+Entrada de dados
+
+Carlos Silva
+Maria dos Santos
+Ana Fernandes
+
+Saída esperada
+
+Carlos Silva
+Maria dos Santos
+Ana Fernandes
+
+Obs: Devido a limitações do Java, a classe definida não pode ser pública.
+
+===========================================================
+
+Minha Resposta:
+-----------------------------------------------------------
+import java.util.*;
+class Funcionario
+{
+    private String nome;
+    
+    public Funcionario(String nome)
+    {
+        this.nome = nome;
+    }
+    
+    public String getNome()
+    {
+        return this.nome;
+    }
+}
+//Defina seu código aqui
+class Departamento {
+    
+    protected List<Funcionario> funcionarios; //cria variável que é um array de Funcionarios
+    
+    public Departamento() {
+        this.funcionarios = new ArrayList<Funcionario>(); //instancia o array
+    }
+    
+    public void adicionarFuncionario(Funcionario f) {
+        this.funcionarios.add(f); //adiciona funcionário com o argumento passado no (Funcionario f)
+    }
+    
+    public void listarFuncionarios() {
+    //lista funcionarios comparando a quantidade de índices i com o tamanho do array "funcionarios.size()" e retorna os nomes buscando, obviamente, pelo índice
+        for (int i = 0; i < funcionarios.size(); i++) {
+            System.out.println(funcionarios.get(i).getNome());
+        }
+    }
+}
+public class Programa{
+    public static void main(String []args){
+    
+        Departamento c = new Departamento();
+        Scanner sc = new Scanner(System.in);
+        
+        c.adicionarFuncionario(new Funcionario(sc.nextLine()));
+        c.adicionarFuncionario(new Funcionario(sc.nextLine()));
+        c.adicionarFuncionario(new Funcionario(sc.nextLine()));
+        
+        c.listarFuncionarios();
+        
+      	sc.close();
+    }
+}
+
+
+Resposta Professor:
+
+import java.util.*;
+
+class Funcionario
+{
+    private String nome;
+    
+    public Funcionario(String nome)
+    {
+        this.nome = nome;
+    }
+    
+    public String getNome()
+    {
+        return this.nome;
+    }
+}
+
+
+class Departamento
+{
+    private List<Funcionario> funcionarios;
+    
+    public Departamento()
+    {
+        this.funcionarios = new ArrayList<Funcionario>();
+    }
+    
+    public void adicionarFuncionario(Funcionario f)
+    {
+        this.funcionarios.add(f);
+    }
+    
+    public void listarFuncionarios(){
+		for (int i = 0; i < funcionarios.size(); i++){
+			System.out.println(funcionarios.get(i).getNome());
+		}
+	}
+    
+}
+
+public class Programa{
+
+    public static void main(String []args){
+    
+        Departamento c = new Departamento();
+
+        Scanner sc = new Scanner(System.in);
+        
+        c.adicionarFuncionario(new Funcionario(sc.nextLine()));
+        c.adicionarFuncionario(new Funcionario(sc.nextLine()));
+        c.adicionarFuncionario(new Funcionario(sc.nextLine()));
+        
+        c.listarFuncionarios();
+        
+      	sc.close();
+    }
+}
