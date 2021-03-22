@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+/home/braulio/eclipse-workspace/Treinaweb/LogicaOO/.metadata/.plugins/org.eclipse.jdt.core
+3639288285.index
+4182871944.index
+1241510407.index
+1565073971.index
